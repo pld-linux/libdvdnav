@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/dvd/%{name}-%{version}.tar.gz
+# Source0-md5: 5b0d168d87f66f8c8d7b2b51e16ff9d8
 URL:		http://dvd.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
