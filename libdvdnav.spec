@@ -52,7 +52,7 @@ libtoolize --copy --force
 aclocal
 autoheader
 %{__autoconf}
-%{__automake} -a -c
+%{__automake}
 %configure \
 	--enable-static
 %{__make}
