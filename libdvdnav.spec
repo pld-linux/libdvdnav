@@ -6,11 +6,12 @@ Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/dvd/%{name}-%{version}.tar.gz
+URL:		http://dvd.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libdvdread-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-URL:		http://dvd.sourceforge.net/
 
 %description
 DVD menu support library.
@@ -47,7 +48,7 @@ Biblioteka statyczna libdvdnav.
 
 %build
 rm -f missing
-libtoolize --copy --force
+%{__libtoolize}
 aclocal
 autoheader
 %{__autoconf}
