@@ -1,16 +1,16 @@
 Summary:	DVD menu support library
 Summary(pl):	Biblioteka obs³ugi menu DVD
 Name:		libdvdnav
-Version:	0.1.1
+Version:	0.1.3
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/dvd/%{name}-%{version}.tar.gz
-Patch0:		%{name}-autoconf.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+URL:		http://dvd.sourceforge.net/
 
 %description
 DVD menu support library.
@@ -44,7 +44,6 @@ Biblioteka statyczna libdvdnav.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 rm -f missing
@@ -62,8 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README ChangeLog
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -72,7 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README ChangeLog
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 
 %files devel
