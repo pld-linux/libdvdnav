@@ -1,7 +1,7 @@
 Summary:	DVD menu support library
 Summary(pl):	Biblioteka obs³ugi menu DVD
 Name:		libdvdnav
-Version:	0.1.7
+Version:	0.1.9
 Release:	1
 License:	GPL
 Group:		Libraries
