@@ -17,33 +17,45 @@ DVD menu support library.
 Biblioteka obs³ugi menu DVD.
 
 %package devel
-Summary:	Headers
-Summary(pl):	Nag³ówki
+Summary:	Development files for libdvdnav
+Summary(pl):	Pliki potrzebne przy tworzeniu aplikacji korzystajacych z libdvdnav
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 
 %description devel
-Header files for libdvdnav.
+Development files for libdvdnav.
 
 %description devel -l pl
-Pliki nag³ówkowe dla libdvdnav.
+Pliki potrzebne przy tworzeniu aplikacji korzystajacych z libdvdnav.
+
+%package static
+Summary:	Static libdvdnav library
+Summary(pl):	Biblioteka statyczna libdvdnav
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}
+
+%description static
+Static libdvdnav library.
+
+%description static -l pl
+Biblioteka statyczna libdvdnav.
 
 %prep
 %setup -q
 #%patch0 -p1
 
 %build
-rm missing
+rm -f missing
 aclocal
 autoheader
-automake -a -c
 autoconf
-%configure
+automake -a -c -f
+%configure \
+	--enable-static
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
@@ -58,11 +70,15 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz
-%{_libdir}/*.la
-%{_libdir}/*.so.*.*.*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
-%{_libdir}/*.so
+%attr(755,root,root) %{_libdir}/lib*.so
+%attr(755,root,root) %{_libdir}/lib*.la
 %{_includedir}/dvdnav
+
+%files static
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/lib*.a
