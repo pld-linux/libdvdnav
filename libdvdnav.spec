@@ -24,6 +24,7 @@ Summary:	Development files for libdvdnav
 Summary(pl):	Pliki potrzebne przy tworzeniu aplikacji korzystaj±cych z libdvdnav
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	libdvdread-devel
 
 %description devel
 Development files for libdvdnav.
