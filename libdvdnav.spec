@@ -47,8 +47,8 @@ Biblioteka statyczna libdvdnav.
 rm -f missing
 aclocal
 autoheader
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure \
 	--enable-static
 %{__make}
