@@ -2,7 +2,7 @@ Summary:	DVD menu support library
 Summary(pl):	Biblioteka obs³ugi menu DVD
 Name:		libdvdnav
 Version:	0.1.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	http://prdownloads.sourceforge.net/dvd/%{name}-%{version}.tar.gz
@@ -20,7 +20,7 @@ Biblioteka obs³ugi menu DVD.
 Summary:	Headers
 Summary(pl):	Nag³ówki
 Group:		Development/Libraries
-Requires:	%{name}-%{version}
+Requires:	%{name} = %{version}
 
 %description devel
 Header files for libdvdnav.
