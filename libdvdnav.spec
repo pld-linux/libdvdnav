@@ -1,12 +1,12 @@
 Summary:	DVD menu support library
 Summary(pl):	Biblioteka obs³ugi menu DVD
 Name:		libdvdnav
-Version:	0.1.9
-Release:	2
+Version:	0.1.10
+Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/dvd/%{name}-%{version}.tar.gz
-# Source0-md5: 5b0d168d87f66f8c8d7b2b51e16ff9d8
+# Source0-md5:	c8ddee96ba1182d73447eaf0bb6fde81
 Patch0:		%{name}-opt.patch
 URL:		http://dvd.sourceforge.net/
 BuildRequires:	autoconf
@@ -25,7 +25,7 @@ Biblioteka obs³ugi menu DVD.
 Summary:	Development files for libdvdnav
 Summary(pl):	Pliki potrzebne przy tworzeniu aplikacji korzystaj±cych z libdvdnav
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	libdvdread-devel
 
 %description devel
@@ -38,7 +38,7 @@ Pliki potrzebne przy tworzeniu aplikacji korzystaj±cych z libdvdnav.
 Summary:	Static libdvdnav library
 Summary(pl):	Biblioteka statyczna libdvdnav
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libdvdnav library.
@@ -83,6 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/dvdnav
+%{_aclocaldir}/*.m4
 
 %files static
 %defattr(644,root,root,755)
