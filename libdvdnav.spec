@@ -1,13 +1,15 @@
 Summary:	DVD menu support library
 Summary(pl):	Biblioteka obs³ugi menu DVD
 Name:		libdvdnav
-Version:	0.1.0
-Release:	2
+Version:	0.1.1
+Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://prdownloads.sourceforge.net/dvd/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/dvd/%{name}-%{version}.tar.gz
+Patch0:		%{name}-autoconf.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -42,13 +44,15 @@ Biblioteka statyczna libdvdnav.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 rm -f missing
+libtoolize --copy --force
 aclocal
 autoheader
 %{__autoconf}
-%{__automake}
+%{__automake} -a -c
 %configure \
 	--enable-static
 %{__make}
