@@ -7,6 +7,7 @@ License:	GPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/dvd/%{name}-%{version}.tar.gz
 # Source0-md5: 5b0d168d87f66f8c8d7b2b51e16ff9d8
+Patch0:		%{name}-opt.patch
 URL:		http://dvd.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -47,9 +48,9 @@ Biblioteka statyczna libdvdnav.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoheader}
@@ -62,7 +63,8 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
