@@ -18,7 +18,7 @@ Biblioteka obs³ugi menu DVD.
 
 %package devel
 Summary:	Development files for libdvdnav
-Summary(pl):	Pliki potrzebne przy tworzeniu aplikacji korzystajacych z libdvdnav
+Summary(pl):	Pliki potrzebne przy tworzeniu aplikacji korzystaj±cych z libdvdnav
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 
@@ -26,7 +26,7 @@ Requires:	%{name} = %{version}
 Development files for libdvdnav.
 
 %description devel -l pl
-Pliki potrzebne przy tworzeniu aplikacji korzystajacych z libdvdnav.
+Pliki potrzebne przy tworzeniu aplikacji korzystaj±cych z libdvdnav.
 
 %package static
 Summary:	Static libdvdnav library
