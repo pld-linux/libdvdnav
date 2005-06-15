@@ -1,3 +1,4 @@
+%bcond_without	static_libs	# don't build static library
 Summary:	DVD menu support library
 Summary(pl):	Biblioteka obs³ugi menu DVD
 Name:		libdvdnav
@@ -57,7 +58,8 @@ Biblioteka statyczna libdvdnav.
 %{__autoconf}
 %{__automake}
 %configure \
-	--enable-static
+	--enable-static \
+	%{!?with_static_libs:--disable-static}
 %{__make}
 
 %install
@@ -85,6 +87,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/dvdnav
 %{_aclocaldir}/*.m4
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.a
+%endif
