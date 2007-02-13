@@ -2,7 +2,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	DVD menu support library
-Summary(pl.UTF-8):   Biblioteka obsługi menu DVD
+Summary(pl.UTF-8):	Biblioteka obsługi menu DVD
 Name:		libdvdnav
 Version:	0.1.10
 Release:	1
@@ -26,7 +26,7 @@ Biblioteka obsługi menu DVD.
 
 %package devel
 Summary:	Development files for libdvdnav
-Summary(pl.UTF-8):   Pliki potrzebne przy tworzeniu aplikacji korzystających z libdvdnav
+Summary(pl.UTF-8):	Pliki potrzebne przy tworzeniu aplikacji korzystających z libdvdnav
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libdvdread-devel
@@ -39,7 +39,7 @@ Pliki potrzebne przy tworzeniu aplikacji korzystających z libdvdnav.
 
 %package static
 Summary:	Static libdvdnav library
-Summary(pl.UTF-8):   Biblioteka statyczna libdvdnav
+Summary(pl.UTF-8):	Biblioteka statyczna libdvdnav
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
