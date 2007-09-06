@@ -6,7 +6,7 @@ Summary:	DVD menu support library
 Summary(pl.UTF-8):	Biblioteka obsługi menu DVD
 Name:		libdvdnav
 Version:	0.1.10
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/dvd/%{name}-%{version}.tar.gz
