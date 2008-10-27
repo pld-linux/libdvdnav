@@ -12,6 +12,7 @@ Group:		Libraries
 Source0:	http://www.mplayerhq.hu/MPlayer/releases/dvdnav/%{name}-%{version}.tar.bz2
 # Source0-md5:	d62383c45b28816771e283515f2c27fa
 Patch0:		%{name}-opt.patch
+Patch1:		%{name}-includes_path.patch
 URL:		http://www.mplayerhq.hu/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1.6
@@ -53,6 +54,7 @@ Biblioteka statyczna libdvdnav.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
