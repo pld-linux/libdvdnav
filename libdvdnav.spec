@@ -1,12 +1,12 @@
 #
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
-#
+
 Summary:	DVD menu support library
 Summary(pl.UTF-8):	Biblioteka obsługi menu DVD
 Name:		libdvdnav
 Version:	4.1.3
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://www.mplayerhq.hu/MPlayer/releases/dvdnav/%{name}-%{version}.tar.bz2
