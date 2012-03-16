@@ -5,12 +5,12 @@
 Summary:	DVD menu support library
 Summary(pl.UTF-8):	Biblioteka obsługi menu DVD
 Name:		libdvdnav
-Version:	4.1.3
-Release:	2
+Version:	4.2.0
+Release:	0.1
 License:	GPL v2+
 Group:		Libraries
-Source0:	http://www.mplayerhq.hu/MPlayer/releases/dvdnav/%{name}-%{version}.tar.bz2
-# Source0-md5:	d62383c45b28816771e283515f2c27fa
+Source0:	http://dvdnav.mplayerhq.hu/releases/%{name}-%{version}.tar.bz2
+# Source0-md5:	53be8903f9802e101929a3451203bbf6
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-includes_path.patch
 URL:		http://www.mplayerhq.hu/
