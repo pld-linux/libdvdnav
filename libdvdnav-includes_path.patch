@@ -1,15 +1,3 @@
-diff -U 3 -H -d -r -N -- libdvdnav-4.1.3~/misc/dvdnav-config.in libdvdnav-4.1.3/misc/dvdnav-config.in
---- libdvdnav-4.1.3~/misc/dvdnav-config.in	2008-05-31 14:34:25.000000000 +0200
-+++ libdvdnav-4.1.3/misc/dvdnav-config.in	2008-10-27 01:17:34.445212997 +0100
-@@ -76,7 +76,7 @@
- fi
- 
- if test "$echo_cflags" = "yes"; then
--      echo -I@includedir@ -I@includedir@/libdvdread @THREAD_CFLAGS@
-+      echo -I@includedir@ -I@includedir@/dvdnav @THREAD_CFLAGS@
- fi
- 
- if test "$echo_libs" = "yes"; then
 diff -U 3 -H -d -r -N -- libdvdnav-4.1.3~/misc/dvdnav.pc.in libdvdnav-4.1.3/misc/dvdnav.pc.in
 --- libdvdnav-4.1.3~/misc/dvdnav.pc.in	2008-07-13 23:13:40.000000000 +0200
 +++ libdvdnav-4.1.3/misc/dvdnav.pc.in	2008-10-27 01:17:34.445212997 +0100
@@ -22,15 +10,3 @@ diff -U 3 -H -d -r -N -- libdvdnav-4.1.3~/misc/dvdnav.pc.in libdvdnav-4.1.3/misc
  
  Name: libdvdnav
  Description: DVD Navigation library
-diff -U 3 -H -d -r -N -- libdvdnav-4.1.3~/misc/dvdnavmini.pc.in libdvdnav-4.1.3/misc/dvdnavmini.pc.in
---- libdvdnav-4.1.3~/misc/dvdnavmini.pc.in	2008-07-13 23:13:40.000000000 +0200
-+++ libdvdnav-4.1.3/misc/dvdnavmini.pc.in	2008-10-27 01:17:50.411877661 +0100
-@@ -1,7 +1,7 @@
- prefix=@prefix@
- exec_prefix=@exec_prefix@
- libdir=@libdir@
--includedir=@includedir@
-+includedir=@includedir@/dvdnav
- 
- Name: libdvdnavmini
- Description: DVD Navigation mini library
