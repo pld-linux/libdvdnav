@@ -9,8 +9,8 @@ Version:	5.0.1
 Release:	0.1
 License:	GPL v2+
 Group:		Libraries
-Source0:	http://www.videolan.org/pub/videolan/libdvdnav/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	026ec3c323b34414a0e33075c3648c1d
+Source0:	http://download.videolan.org/pub/videolan/libdvdnav/%{version}/%{name}-%{version}.tar.bz2
+# Source0-md5:	81e30fb57eaf9f61aa6513a7bd85bd74
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-includes_path.patch
 Patch2:		link.patch
