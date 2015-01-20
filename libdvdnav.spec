@@ -87,25 +87,19 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog DEVELOPMENT-POLICY.txt README TODO
 %attr(755,root,root) %{_libdir}/libdvdnav.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libdvdnav.so.4
-%attr(755,root,root) %{_libdir}/libdvdnavmini.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libdvdnavmini.so.4
 
 %files devel
 %defattr(644,root,root,755)
 %doc doc/{dvd_structures,library_layout}
 %attr(755,root,root) %{_bindir}/dvdnav-config
 %attr(755,root,root) %{_libdir}/libdvdnav.so
-%attr(755,root,root) %{_libdir}/libdvdnavmini.so
 %{_libdir}/libdvdnav.la
-%{_libdir}/libdvdnavmini.la
 %{_includedir}/dvdnav
 %{_pkgconfigdir}/dvdnav.pc
-%{_pkgconfigdir}/dvdnavmini.pc
 %{_aclocaldir}/dvdnav.m4
 
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libdvdnav.a
-%attr(755,root,root) %{_libdir}/libdvdnavmini.a
 %endif
