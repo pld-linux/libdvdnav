@@ -18,7 +18,6 @@ BuildRequires:	automake >= 1.6
 BuildRequires:	libdvdread-devel >= 4.1.3
 BuildRequires:	libtool >= 1.4
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
