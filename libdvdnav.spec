@@ -91,12 +91,10 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %doc doc/{dvd_structures,library_layout}
-%attr(755,root,root) %{_bindir}/dvdnav-config
 %attr(755,root,root) %{_libdir}/libdvdnav.so
 %{_libdir}/libdvdnav.la
 %{_includedir}/dvdnav
 %{_pkgconfigdir}/dvdnav.pc
-%{_aclocaldir}/dvdnav.m4
 
 %if %{with static_libs}
 %files static
