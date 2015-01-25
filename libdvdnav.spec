@@ -16,7 +16,8 @@ URL:		http://dvdnav.mplayerhq.hu/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1.6
 BuildRequires:	libdvdread-devel >= 4.1.3
-BuildRequires:	libtool >= 1.4
+BuildRequires:	libtool >= 2:2
+BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -62,6 +63,7 @@ Biblioteka statyczna libdvdnav.
 %{__autoconf}
 %{__automake}
 %configure \
+	--disable-silent-rules \
 	%{?with_static_libs:--enable-static}
 %{__make}
 
@@ -71,7 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%{__rm} -rf $RPM_BUILD_ROOT%{_docdir}/%{name}
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
