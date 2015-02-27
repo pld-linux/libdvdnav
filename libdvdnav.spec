@@ -6,7 +6,7 @@ Summary:	DVD menu support library
 Summary(pl.UTF-8):	Biblioteka obsługi menu DVD
 Name:		libdvdnav
 Version:	5.0.3
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://download.videolan.org/pub/videolan/libdvdnav/%{version}/%{name}-%{version}.tar.bz2
