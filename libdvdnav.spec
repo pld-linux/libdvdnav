@@ -2,24 +2,25 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 
+%define	dvdread_ver 5.0.3
 Summary:	DVD menu support library
 Summary(pl.UTF-8):	Biblioteka obsługi menu DVD
 Name:		libdvdnav
-Version:	5.0.3
-Release:	2
+Version:	6.0.0
+Release:	1
 License:	GPL v2+
 Group:		Libraries
-Source0:	http://download.videolan.org/pub/videolan/libdvdnav/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	e9ea4de3bd8f204e61301d407d09f033
+Source0:	https://download.videolan.org/pub/videolan/libdvdnav/%{version}/%{name}-%{version}.tar.bz2
+# Source0-md5:	76a9e24496acf7f0c2ae656e8502686d
 Patch0:		%{name}-includes_path.patch
 URL:		http://dvdnav.mplayerhq.hu/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1.6
-BuildRequires:	libdvdread-devel >= 5.0.2
+BuildRequires:	libdvdread-devel >= %{dvdread_ver}
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
-Requires:	libdvdread >= 5.0.2
+Requires:	libdvdread >= %{dvdread_ver}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,7 +34,7 @@ Summary:	Development files for libdvdnav
 Summary(pl.UTF-8):	Pliki potrzebne przy tworzeniu aplikacji korzystających z libdvdnav
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	libdvdread-devel >= 5.0.2
+Requires:	libdvdread-devel >= %{dvdread_ver}
 
 %description devel
 Development files for libdvdnav.
