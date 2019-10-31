@@ -2,16 +2,16 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 
-%define	dvdread_ver 5.0.3
+%define	dvdread_ver 6.0.0
 Summary:	DVD menu support library
 Summary(pl.UTF-8):	Biblioteka obsługi menu DVD
 Name:		libdvdnav
-Version:	6.0.0
+Version:	6.0.1
 Release:	1
 License:	GPL v2+
 Group:		Libraries
 Source0:	https://download.videolan.org/pub/videolan/libdvdnav/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	76a9e24496acf7f0c2ae656e8502686d
+# Source0-md5:	3a28d2cc7e25c1cbcb06443f3114f0b1
 Patch0:		%{name}-includes_path.patch
 URL:		http://dvdnav.mplayerhq.hu/
 BuildRequires:	autoconf >= 2.53
